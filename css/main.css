@@ -1,0 +1,117 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:300);
+
+header{
+  font-size       : 20px;
+  background-color: #0F9D58;
+  height          : 50px;
+  margin-bottom   : 20px;
+}
+
+html {
+  min-height: 100%;
+}
+
+body { 
+  background-color: #DCDCDC;
+  font-family: "Roboto";
+}
+
+.blocks img{
+  opacity: 0.7;
+}
+
+.img_container{
+  height: 100%;
+  background-color: white;
+}
+
+
+div#all {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+/* generic css */
+.blocks {
+    margin          : 20px;
+    width           : 200px;
+    height          : 200px;
+    float           : left;
+    overflow        : hidden;
+    position        : relative;
+    box-shadow      : 6px 6px 11px 0px rgba(0,0,0,0.67);
+    cursor          : default;
+    border-radius   : 10%;
+    background-color: #F1EBE4;
+}
+
+.blocks img {
+    width: 300px;
+    height: 50%;
+}
+
+.blocks_title{
+  padding-top  : 20px;
+  font-size    : 20px;
+  margin-bottom: 10px;
+}
+
+.blocks_text{
+    height: 100px;
+    padding-left: 20px;
+}
+
+.add{
+    background-color: gray;
+    box-shadow      : none;
+}
+
+
+
+/*====Button==============================================================*/
+
+.fab {
+  position        : absolute;
+  width           : 56px;
+  height          : 56px;
+  border-radius   : 50%;
+  color           : #fff;
+  overflow        : hidden;
+  transition      : box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0.2s;
+  box-shadow      : 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  z-index         : 10;
+}
+
+.fab.green {
+  background-color: #0f9d58;
+  right           : 10px;
+  top             : 50%;
+  margin-top      : -28px;
+}
+
+.fab.gray {
+  background-color: #CCCCCC;
+  position        : absolute;
+  left            : 50%;
+  margin-left     : -28px;
+  top             : 50%;
+  margin-top      : -28px;
+  box-shadow      : none;
+
+}
+
+
+.fab:active {
+  box-shadow      : 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+  transition-delay: 0s;
+}
+
+.fab > core-icon {
+  margin: 16px;
+}
+
+.fab > core-icon::shadow path {
+  fill: #fff;
+}
