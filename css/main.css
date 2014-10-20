@@ -1,87 +1,52 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:300);
 
-header{
-  font-size       : 20px;
-  background-color: #0F9D58;
-  height          : 50px;
-  margin-bottom   : 20px;
-}
-
 html {
   min-height: 100%;
 }
 
 body { 
-  background-color: #DCDCDC;
+  background-color: #E6E6E6;
   font-family: "Roboto";
 }
 
-.blocks img{
-  opacity: 0.7;
-}
-
-.img_container{
-  height: 100%;
-  background-color: white;
+a {
+  text-decoration: none;
 }
 
 
-div#all {
-  width: 100%;
-  height: 100%;
-  margin: auto;
-}
 
-/* generic css */
-.blocks {
-    margin          : 20px;
-    width           : 200px;
-    height          : 200px;
-    float           : left;
-    overflow        : hidden;
-    position        : relative;
-    box-shadow      : 6px 6px 11px 0px rgba(0,0,0,0.67);
-    cursor          : default;
-    border-radius   : 10%;
-    background-color: #F1EBE4;
-}
-
-.blocks img {
-    width: 300px;
-    height: 50%;
-}
-
-.blocks_title{
-  padding-top  : 20px;
-  font-size    : 20px;
-  margin-bottom: 10px;
-}
-
-.blocks_text{
-    height: 100px;
-    padding-left: 20px;
-}
-
-.add{
-    background-color: gray;
+/*====add_button==============================================================*/
+.blocks.add {
+    background-color: #E6E6E6;
     box-shadow      : none;
 }
 
+.icon_add{
+  height     : 150px;
+  width      : 150px;
+  color      : gray;
+  position   : absolute;
+  top        : 50%;
+  left       : 50%;
+  margin-left: -75px;
+  margin-top : -75px;
+}
+
+.ripple_add{
+  cursor: pointer;
+}
 
 
-/*====Button==============================================================*/
+/*============fab==============*/
 
 .fab {
   position        : absolute;
-  width           : 56px;
-  height          : 56px;
-  border-radius   : 50%;
-  color           : #fff;
   overflow        : hidden;
   transition      : box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0.2s;
   box-shadow      : 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   z-index         : 10;
+  cursor          :pointer;
 }
 
 .fab.green {
@@ -89,19 +54,10 @@ div#all {
   right           : 10px;
   top             : 50%;
   margin-top      : -28px;
+  width           : 56px;
+  height          : 56px;
+  border-radius   : 50%;
 }
-
-.fab.gray {
-  background-color: #CCCCCC;
-  position        : absolute;
-  left            : 50%;
-  margin-left     : -28px;
-  top             : 50%;
-  margin-top      : -28px;
-  box-shadow      : none;
-
-}
-
 
 .fab:active {
   box-shadow      : 0 8px 17px 0 rgba(0, 0, 0, 0.2);
@@ -114,4 +70,79 @@ div#all {
 
 .fab > core-icon::shadow path {
   fill: #fff;
+}
+
+.fab {
+  position        : absolute;
+  color           : #fff;
+  overflow        : hidden;
+  transition      : box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0.2s;
+  box-shadow      : 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  z-index         : 10;
+  cursor          :pointer;
+}
+
+
+
+
+
+
+
+
+
+/* =================================Icon Button==========================*/
+.icon-button {
+  position: absolute;
+  width   : 56px;
+  height  : 56px;
+}
+
+.icon-button core-icon {
+  margin: 13px;
+  transition: -webkit-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-button:hover core-icon {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.icon-button paper-ripple {
+  overflow: hidden;
+  color: #646464;
+}
+
+
+/*=====================little navbar==============================*/
+
+
+.three_points {
+  height:30px; 
+  width:30px;
+  right: 0px;
+  cursor  :pointer;
+}
+
+.three_points core-icon{
+  height: 16px;
+  width: 16px;
+  margin: 7px;
+}
+
+
+
+.trash_can {
+  right : 30px;
+  height:30px; 
+  width :30px;
+  cursor:pointer;
+}
+
+
+.trash_can core-icon{
+  height: 16px;
+  width: 16px;
+  margin: 7px;
 }

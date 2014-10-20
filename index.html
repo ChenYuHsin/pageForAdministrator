@@ -1,58 +1,59 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 
 <head>
 
   <meta charset="UTF-8">
 
-  <title>Students</title>
+  <title>Administrator</title>
 
+<!--   <link rel="stylesheet" href="css/trial.css" media="screen" type="text/css" /> -->
    
   <link rel="stylesheet" href="stylesheets/screen.css" media="screen" type="text/css" />
   <link rel="stylesheet" href="css/main.css" media="screen" type="text/css" />
+  <link rel="stylesheet" href="css/blocks.css" media="screen" type="text/css" />
   <link rel="import" href="http://www.polymer-project.org/components/core-icons/core-icons.html">
   <link rel="import" href="http://www.polymer-project.org/components/paper-ripple/paper-ripple.html">
   <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
-
+  
 </head>
 
 <body>
 
-<header>
+<div class="header">
 
-  <ul class="tabs">
-    <li><a href="#">All Examinations</a></li>
-    <li><a href="#">All Questions</a></li>
-  </ul>
+      <div class="navbar">
+        <div class="left_button">
+          <div class="icon-button">
+            <core-icon icon="menu"></core-icon>
+            <paper-ripple class="circle recenteringTouch" fit></paper-ripple>
+          </div>
+        </div>
 
-</header>
+        <div class="tabs">
+          <div><a href="#">Tab01</a></div><!--
+       --><div><a href="#">Tab02</a></div><!--
+       -->
+        </div>
 
-<!-- side_menu -->
-<div  class="open">
-	<span class="cls"></span>
-	<span>
-		<ul class="sub-menu ">
-			<li>
-				<a href="#about" title="about">Sobre / About</a>
-			</li>
-			<li>
-				<a href="#skills" title="skills">Habilidades / Skills</a>
-			</li>
-			<li>
-				<a href="#jobs" title="jobs">Trabalhos / Jobs</a>
-			</li>
-			<li>
-				<a href="#contact" title="contact">Contato / Contact</a>
-			</li>
-		</ul>
-	</span>
-	<span class="cls"></span>
+      </div>
+
 </div>
 
   <!-- 內容 -->
   <div id="all">
 
-    <div class ="blocks">        
+    <div class ="blocks"> 
+      <div class="icon-button three_points">
+        <core-icon icon="more-vert"></core-icon>
+        <paper-ripple class="circle recenteringTouch" fit></paper-ripple>
+      </div> 
+
+      <div class="icon-button trash_can">
+        <core-icon icon="delete"></core-icon>
+        <paper-ripple class="circle recenteringTouch" fit></paper-ripple>
+      </div> 
+
       <div class="fab green">
         <core-icon icon="create"></core-icon>
         <paper-ripple class="circle recenteringTouch" fit></paper-ripple>
@@ -61,88 +62,18 @@
         <p class="blocks_title">woodsman</p>  
         <p>Logs are nice, I own a few myself.</p>  
       </div>
+      
       <div class="img_container">
         <img src   ="assets/1.jpg" />
       </div>  
     </div>   	
 
-    <div class ="blocks">        
-      <div class="fab green">
-        <core-icon icon="create"></core-icon>
-        <paper-ripple class="circle recenteringTouch" fit></paper-ripple>
-      </div>  
-      <div class ="blocks_text">  
-        <p class="blocks_title">woodsman</p>  
-        <p>Logs are nice, I own a few myself.</p>  
-      </div>
-      <div class="img_container">
-        <img src   ="assets/1.jpg" />
-      </div>  
-    </div>      
+    <div class ="blocks add "> 
+        <core-icon icon="add-box" class="icon_add"></core-icon>
+        <paper-ripple class="recenteringTouch ripple_add" fit></paper-ripple>
+    </div>
 
-    <div class ="blocks">        
-      <div class="fab green">
-        <core-icon icon="create"></core-icon>
-        <paper-ripple class="circle recenteringTouch" fit></paper-ripple>
-      </div>  
-      <div class ="blocks_text">  
-        <p class="blocks_title">woodsman</p>  
-        <p>Logs are nice, I own a few myself.</p>  
-      </div>
-      <div class="img_container">
-        <img src   ="assets/1.jpg" />
-      </div>  
-    </div>     
-
-    <div class ="blocks">        
-      <div class="fab green">
-        <core-icon icon="create"></core-icon>
-        <paper-ripple class="circle recenteringTouch" fit></paper-ripple>
-      </div>  
-      <div class ="blocks_text">  
-        <p class="blocks_title">woodsman</p>  
-        <p>Logs are nice, I own a few myself.</p>  
-      </div>
-      <div class="img_container">
-        <img src   ="assets/1.jpg" />
-      </div>  
-    </div>        
-
-    <div class ="blocks">        
-      <div class="fab green">
-        <core-icon icon="create"></core-icon>
-        <paper-ripple class="circle recenteringTouch" fit></paper-ripple>
-      </div>  
-      <div class ="blocks_text">  
-        <p class="blocks_title">woodsman</p>  
-        <p>Logs are nice, I own a few myself.</p>  
-      </div>
-      <div class="img_container">
-        <img src   ="assets/2.jpg" />
-      </div>  
-    </div>     
-
-    <div class ="blocks">        
-      <div class="fab green">
-        <core-icon icon="create"></core-icon>
-        <paper-ripple class="circle recenteringTouch" fit></paper-ripple>
-      </div>  
-      <div class ="blocks_text">  
-        <p class="blocks_title">woodsman</p>  
-        <p>Logs are nice, I own a few myself.</p>  
-      </div>
-      <div class="img_container">
-        <img src   ="assets/2.jpg" />
-      </div>  
-    </div>    
-
-    <div class ="blocks add">  
-      <div class="fab grays">
-        <core-icon icon="add"></core-icon>
-        <paper-ripple class="circle recenteringTouch" fit></paper-ripple>
-      </div>  
-    </div>     
-
+  </div>
 
 </body>
 

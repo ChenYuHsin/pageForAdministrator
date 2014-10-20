@@ -1,19 +1,6 @@
-$(document).ready(function() {
-		$(document).delegate('.open', 'click', function(event){
-			$(this).addClass('oppenned');
-			event.stopPropagation();
-		})
-		$(document).delegate('body', 'click', function(event) {
-			$('.open').removeClass('oppenned');
-		})
-		$(document).delegate('.cls', 'click', function(event){
-			$('.open').removeClass('oppenned');
-			event.stopPropagation();
-		});
+$(document).ready(function() { 
 
-		// TAB_js
-
-		(function ($) { 
+	(function ($) { 
 		$('.tab ul.tabs').addClass('active').find('> li:eq(0)').addClass('current');
 		
 		$('.tab ul.tabs li a').click(function (g) { 
