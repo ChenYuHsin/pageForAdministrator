@@ -26,14 +26,13 @@ $green: #87d3b7;
 		height: 56px;
   		text-align: center;
   		font-size: 150%;
+  		background-color: white;
 		div {
 			display: inline-block;
 			margin: 0;
 		}
 
 		a {
-			background-color: #eff0f2;
-			color: #888;
 			display: block;
 			text-decoration: none;
 			-webkit-transition: all 0.2s ease-in-out;
@@ -43,6 +42,18 @@ $green: #87d3b7;
 		}
 	}
 }
+
+.tab1 {
+	display: none;
+	padding: 30px 0;
+
+
+	// &:first-child {display: block;}
+}
+
+
+
+
 
 .current a {
 	color: #fff;

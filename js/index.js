@@ -1,20 +1,33 @@
 $(document).ready(function() { 
 
+	// ===========================tabs交換效果
 	(function ($) { 
-		$('.tab ul.tabs').addClass('active').find('> li:eq(0)').addClass('current');
+		var tab_now;
+		$('.navbar').addClass('active').find('> .tabs div:eq(0)').addClass('current');
+		//預設幫上面tabs選項第一個加上current這個class
+
 		
-		$('.tab ul.tabs li a').click(function (g) { 
-			var tab = $(this).closest('.tab'), 
-				index = $(this).closest('li').index();
+		$('.tabs div a').click(function (g) { 
+		 	var navbar = $(this).closest('.navbar'),            //就navbar 
+		 		index = $(this).closest('div').index();			//點中的那個tab編號(0 or 1)
+		 		         
+
+
+		 	navbar.find('.tabs > div').removeClass('current');  //移除current
+		 	$(this).closest('div').addClass('current');			//幫點中那一個tab加current
+
+
+
+		 	if (index==1) {
+		 		$(".tab0").slideUp(); 
+		 		$(".tab1").slideDown();
+		 	} else{
+		 		$(".tab1").slideUp(); 
+		 		$(".tab0").slideDown();
+		 	};
 			
-			tab.find('ul.tabs > li').removeClass('current');
-			$(this).closest('li').addClass('current');
-			
-			tab.find('.tab_content').find('div.tabs_item').not('div.tabs_item:eq(' + index + ')').slideUp();
-			tab.find('.tab_content').find('div.tabs_item:eq(' + index + ')').slideDown();
-			
-			g.preventDefault();
-		} );
+		 	g.preventDefault();                                 //不確定幹嘛...
+		});
 	})(jQuery);
 
 });
