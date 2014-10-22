@@ -1,4 +1,4 @@
-$(document).ready(function() { 
+c$(document).ready(function() { 
 
 	// ===========================tabs交換效果
 	(function ($) { 
