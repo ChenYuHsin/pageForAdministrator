@@ -49,6 +49,15 @@ $(document).ready(function() {
      		$(".btn_submitModal").toggleClass(state);
      		$(".btn_nextModal").toggleClass(state);
 		});
+
+
+		$(".btn_submitModal").click(function(){
+			var newExamBlock=$('<div class =\"blocks\"></div>');
+			$(".tab0").prepend(newExamBlock);
+			
+     		$(".modal-wrapper").removeClass("open");
+     		$(".tab0").removeClass("blur");
+		});
 });
 
 
@@ -58,8 +67,3 @@ $(document).ready(function() {
 // 	var newExamBlock=$('<div class =\"blocks\"></div>');
 // 	$(".tab0").prepend(newExamBlock);
 // }
-
-function Hide_Modal(e){
-	$(".modal-wrapper").removeClass("open");
-	$(".tab0").removeClass("blur");
-}
