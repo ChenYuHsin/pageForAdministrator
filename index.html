@@ -7,14 +7,15 @@
 
   <title>Administrator</title>
 
-   
+  <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+  <script src="js/index.js"></script>   
   <link rel="stylesheet" href="stylesheets/screen.css" media="screen" type="text/css" />
   <link rel="stylesheet" href="css/main.css" media="screen" type="text/css" />
   <link rel="stylesheet" href="css/blocks.css" media="screen" type="text/css" />
   <link rel="import" href="http://www.polymer-project.org/components/core-icons/core-icons.html">
   <link rel="import" href="http://www.polymer-project.org/components/paper-ripple/paper-ripple.html">
-  <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
-  <script src="js/index.js"></script>
+
+
   
 </head>
 
@@ -68,12 +69,71 @@
       </div>  
     </div>   	
 
-    <div class ="blocks add "> 
+    <div class ="blocks add"> 
         <core-icon icon="add-box" class="icon_add"></core-icon>
         <paper-ripple class="recenteringTouch ripple_add" fit></paper-ripple>
     </div>
-
   </div>
+
+  <div class="modal-wrapper">
+    <div class="modal">
+      <div class="modal_header">
+        <a class="btn-close">
+          <div class="icon-button">
+            <core-icon icon="close"></core-icon>
+            <paper-ripple class="circle recenteringTouch" fit></paper-ripple>
+          </div>
+        </a>
+      </div>
+      <div class="form_newExam">
+        <form class="form_step1">
+          <div class="group">      
+            <input type="text" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Examination Name</label>
+          </div>
+
+          <div class="group">      
+            <input type="text" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Time Needed</label>
+          </div>
+        </form>
+        <form class="form_step2">
+          <div class="group">      
+            <input type="text" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Questions</label>
+          </div>
+
+          <div class="group">      
+            <input type="text" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>How many questions?</label>
+          </div>
+        </form>
+      </div>
+      <div class="modal_footer">
+        <a class="btn_nextModal">
+          <div class="icon-button">
+            <core-icon icon="arrow-forward"></core-icon>
+            <paper-ripple class="circle recenteringTouch" fit></paper-ripple>
+          </div>
+        </a>
+
+        <a class="btn_submitModal">
+          <div class="icon-button">
+            <core-icon icon="file-upload"></core-icon>
+            <paper-ripple class="circle recenteringTouch" fit></paper-ripple>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>  
 
   <div class="tab1" >
   123456789

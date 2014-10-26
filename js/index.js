@@ -1,7 +1,6 @@
-c$(document).ready(function() { 
+$(document).ready(function() { 
 
 	// ===========================tabs交換效果
-	(function ($) { 
 		var tab_now;
 		$('.navbar').addClass('active').find('> .tabs div:eq(0)').addClass('current');
 		//預設幫上面tabs選項第一個加上current這個class
@@ -28,6 +27,39 @@ c$(document).ready(function() {
 			
 		 	g.preventDefault();                                 //不確定幹嘛...
 		});
-	})(jQuery);
 
+		$('.add').click(function() {
+	    	$('.modal-wrapper').toggleClass('open');
+	    	$('.tab0').toggleClass('blur');
+	     	return false;
+	    });
+
+
+     	$('.btn-close').click(function(){
+     		$(".modal-wrapper").removeClass("open");
+     		$(".tab0").removeClass("blur");
+
+		});
+     
+
+     	$('.btn_nextModal').click(function(){
+     		var state="state2";
+     		$(".form_step1").toggleClass(state);
+     		$(".form_step2").toggleClass(state);
+     		$(".btn_submitModal").toggleClass(state);
+     		$(".btn_nextModal").toggleClass(state);
+		});
 });
+
+
+// 新增==============
+
+// function AddExam(){
+// 	var newExamBlock=$('<div class =\"blocks\"></div>');
+// 	$(".tab0").prepend(newExamBlock);
+// }
+
+function Hide_Modal(e){
+	$(".modal-wrapper").removeClass("open");
+	$(".tab0").removeClass("blur");
+}
