@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="stylesheets/screen.css" media="screen" type="text/css" />
   <link rel="stylesheet" href="css/main.css" media="screen" type="text/css" />
   <link rel="stylesheet" href="css/blocks.css" media="screen" type="text/css" />
+  <link rel="stylesheet" href="css/deleteConfirm.css" media="screen" type="text/css" />
   <link rel="import" href="http://www.polymer-project.org/components/core-icons/core-icons.html">
   <link rel="import" href="http://www.polymer-project.org/components/paper-ripple/paper-ripple.html">
 
@@ -78,7 +79,7 @@
   <div class="modal-wrapper">
     <div class="modal">
       <div class="modal_header">
-        <a class="btn-close">
+        <a class="btn_close">
           <div class="icon-button">
             <core-icon icon="close"></core-icon>
             <paper-ripple class="circle recenteringTouch" fit></paper-ripple>
@@ -87,29 +88,30 @@
       </div>
       <div class="form_newExam">
         <form class="form_step1">
-          <div class="group">      
+          <div class="Form_Question">      
             <input type="text" required>
             <span class="highlight"></span>
             <span class="bar"></span>
             <label>Examination Name</label>
           </div>
 
-          <div class="group">      
+          <div class="Form_Question">      
             <input type="text" required>
             <span class="highlight"></span>
             <span class="bar"></span>
             <label>Time Needed</label>
           </div>
         </form>
+
         <form class="form_step2">
-          <div class="group">      
+          <div class="Form_Question">      
             <input type="text" required>
             <span class="highlight"></span>
             <span class="bar"></span>
             <label>Questions</label>
           </div>
 
-          <div class="group">      
+          <div class="Form_Question">      
             <input type="text" required>
             <span class="highlight"></span>
             <span class="bar"></span>
@@ -117,7 +119,10 @@
           </div>
         </form>
       </div>
+
+
       <div class="modal_footer">
+
         <a class="btn_nextModal">
           <div class="icon-button">
             <core-icon icon="arrow-forward"></core-icon>
@@ -131,14 +136,34 @@
             <paper-ripple class="circle recenteringTouch" fit></paper-ripple>
           </div>
         </a>
+        
       </div>
     </div>
-  </div>  
+  </div>
+
+  <div class="confirmCircle_wrapper">
+    <div class="confirm_circle">
+
+      <div class="square">
+        <div class="main">
+          <span class='fontawesome-trash'></span>
+          <strong>Delete?</strong>
+          <p>This will delete the content</p>
+        </div>
+        <div class="inner-square left">
+          <span class='fontawesome-ok'></span>
+        </div>
+        <div class="inner-square right">
+          <span class='fontawesome-remove'></span>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="tab1" >
-  123456789
-  132456789
-  12345789
+    123456789
+    132456789
+    12345789
   </div>
 
 </body>
