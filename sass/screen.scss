@@ -5,10 +5,35 @@
 
 @import "compass/reset";
 @import "compass/css3";
+@import url(http://fonts.googleapis.com/css?family=Roboto:300);
 
 
 // color
 $green: #87d3b7;
+
+html {
+  min-height: 100%;
+}
+
+body { 
+  font-family: "Roboto";
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* NAVBAR */

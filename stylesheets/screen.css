@@ -2,6 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import url(http://fonts.googleapis.com/css?family=Roboto:300);
 /* line 5, ../../../../RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -67,8 +68,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+/* line 14, ../sass/screen.scss */
+html {
+  min-height: 100%;
+}
+
+/* line 18, ../sass/screen.scss */
+body {
+  font-family: "Roboto";
+}
+
+/* line 22, ../sass/screen.scss */
+a {
+  text-decoration: none;
+}
+
 /* NAVBAR */
-/* line 16, ../sass/screen.scss */
+/* line 41, ../sass/screen.scss */
 .navbar {
   top: 0;
   left: 0;
@@ -78,19 +94,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
-/* line 25, ../sass/screen.scss */
+/* line 50, ../sass/screen.scss */
 .navbar .tabs {
   height: 56px;
   text-align: center;
   font-size: 150%;
   background-color: white;
 }
-/* line 30, ../sass/screen.scss */
+/* line 55, ../sass/screen.scss */
 .navbar .tabs div {
   display: inline-block;
   margin: 0;
 }
-/* line 35, ../sass/screen.scss */
+/* line 60, ../sass/screen.scss */
 .navbar .tabs a {
   display: block;
   text-decoration: none;
@@ -100,13 +116,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   border-bottom: 2px solid #87d3b7;
 }
 
-/* line 46, ../sass/screen.scss */
+/* line 71, ../sass/screen.scss */
 .tab1 {
   display: none;
   padding: 30px 0;
 }
 
-/* line 58, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 .current a {
   color: #fff;
   background: #87d3b7;
