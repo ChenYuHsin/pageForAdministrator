@@ -1,168 +1,109 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 
 <head>
+    <meta name="generator" content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <title>homepage</title>
+    <link href="css/reset.css" rel="stylesheet" />
+    <!-- 記得任何東西都要先reset -->
+    <script src="js/buzz.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.client.js"></script>
+    <script src="js/jquery.transit.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://www.parsecdn.com/js/parse-1.2.18.min.js"></script>
+    <script src="js/signup.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
 
-  <meta charset="UTF-8">
 
-  <title>Administrator</title>
-
-  <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
-  <script src="js/index.js"></script>   
-  <link rel="stylesheet" href="stylesheets/screen.css" media="screen" type="text/css" />
-  <link rel="stylesheet" href="css/main.css" media="screen" type="text/css" />
-  <link rel="stylesheet" href="css/blocks.css" media="screen" type="text/css" />
-  <link rel="stylesheet" href="css/deleteConfirm.css" media="screen" type="text/css" />
-  <link rel="import" href="http://www.polymer-project.org/components/core-icons/core-icons.html">
-  <link rel="import" href="http://www.polymer-project.org/components/paper-ripple/paper-ripple.html">
-
-
-  
 </head>
 
 <body>
-
-<div class="header">
-
-      <div class="navbar">
-        <div class="left_button">
-          <div class="icon-button">
-            <core-icon icon="menu"></core-icon>
-            <paper-ripple class="circle recenteringTouch" fit></paper-ripple>
-          </div>
+    <div class="biggest-container">
+        <div class="container" data-toggle="modal" data-target="#login">
+            <br/>
+            <span class="login">登入</span>
+            <br/>
+            <span id="idnumber">E-mail</span>
+            <br/>
+            <input id="loginid" type="text" class="logintext">
+            <br/>
+            <br/>
+            <span id="password">密碼</span>
+            <br/>
+            <input id="loginpassword" type="password" class="logintext">
+            <br/>
+            <br/>
+            <div class="loginbtn">
+                <!--span><a href="board.html">登入</a>
+                </span-->
+                <p id="loginbtn">登入</p>
+            </div>
+            <span data-toggle="modal" data-target="#sign-up" id="noaccount">沒有帳號嗎？</span>
         </div>
-
-        <div class="tabs">
-          <div><a href="#">tab_exams</a></div><!--
-       --><div><a href="#">tab_questions</a></div><!--
-       -->
-            <!-- 加註解符號是為了讓Tab中間沒有縫隙 -->
-        </div>
-
-      </div>
-</div>
-
-  <!-- 內容 -->
-  <div class="tab_exams">
-
-    <div class ="blocks"> 
-      <div class="icon-button three_points">
-        <core-icon icon="more-vert"></core-icon>
-        <paper-ripple class="circle recenteringTouch" fit></paper-ripple>
-      </div> 
-
-      <div class="icon-button trash_can">
-        <core-icon icon="delete"></core-icon>
-        <paper-ripple class="circle recenteringTouch" fit></paper-ripple>
-      </div> 
-
-      <div class="fab green">
-        <core-icon icon="create"></core-icon>
-        <paper-ripple class="circle recenteringTouch" fit></paper-ripple>
-      </div>  
-      <div class ="blocks_text">  
-        <p class="blocks_title">woodsman</p>  
-        <p>Logs are nice, I own a few myself.</p>  
-      </div>
-      
-      <div class="img_container">
-        <img src   ="assets/1.jpg" />
-      </div>  
-    </div>   	
-
-    <div class ="blocks add"> 
-        <core-icon icon="add-box" class="icon_add"></core-icon>
-        <paper-ripple class="recenteringTouch ripple_add" fit></paper-ripple>
     </div>
-  </div>
-  
-  <div class="modal-wrapper">
-    <div class="modal">
-      <div class="modal_header">
-        <a class="btn_close">
-          <div class="icon-button">
-            <core-icon icon="close"></core-icon>
-            <paper-ripple class="circle recenteringTouch" fit></paper-ripple>
-          </div>
-        </a>
-      </div>
-      <div class="form_newExam">
-        <form class="form_step1">
-          <div class="Form_Question">      
-            <input type="text" required>
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <label>Examination Name</label>
-          </div>
-
-          <div class="Form_Question">      
-            <input type="text" required>
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <label>Time Needed</label>
-          </div>
-        </form>
-
-        <form class="form_step2">
-          <div class="Form_Question">      
-            <input type="text" required>
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <label>Questions</label>
-          </div>
-
-          <div class="Form_Question">      
-            <input type="text" required>
-            <span class="highlight"></span>
-            <span class="bar"></span>
-            <label>How many questions?</label>
-          </div>
-        </form>
-      </div>
 
 
-      <div class="modal_footer">
 
-        <a class="btn_nextModal">
-          <div class="icon-button">
-            <core-icon icon="arrow-forward"></core-icon>
-            <paper-ripple class="circle recenteringTouch" fit></paper-ripple>
-          </div>
-        </a>
 
-        <a class="btn_submitModal">
-          <div class="icon-button">
-            <core-icon icon="file-upload"></core-icon>
-            <paper-ripple class="circle recenteringTouch" fit></paper-ripple>
-          </div>
-        </a>
-        
-      </div>
+    <!-- Modal start-->
+    <div class="modal fade" id="sign-up" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">註冊</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+
+
+                        <span>身份證字號</span>
+                        <input id="signupid" type="text">
+                        <br/>
+                        <br/>
+                        <span>密碼</span>
+                        <input id="signuppassword" type="password">
+                        <br/>
+                        <br/>
+                        <span>確認密碼</span>
+                        <input id="signupcpassword" type="password">
+                        <br/>
+                        <br/>
+                        <span>姓名</span>
+                        <input id="signupname" type="text">
+                        <br/>
+                        <br/>
+                        <span>性別</span>
+                        <select id="signupgender" size="">
+                            <option>男</option>
+                            <option>女</option>
+                            </option>
+                        </select>
+                        </select>
+                        <br/>
+                        <br/>
+                        <span>E-mail</span>
+                        <input id="signupemail" type="email">
+                        <br/>
+                        <br/>
+                        <span>聯絡電話</span>
+                        <input id="signuptel" type="text">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button id="signupbtn" type="button" class="btn btn-primary">註冊</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <div class="confirmCircle_wrapper">
-    <div class="confirm_circle">
+    <!-- Modal stop-->
 
-      <div class="square">
-        <div class="main">
-          <span class='fontawesome-trash'></span>
-          <strong>Delete?</strong>
-          <p>This will delete the content</p>
-        </div>
-        <div class="inner-square left">
-          <span class='fontawesome-ok'></span>
-        </div>
-        <div class="inner-square right">
-          <span class='fontawesome-remove'></span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="tab_questions" >
-  </div>
 
 </body>
 

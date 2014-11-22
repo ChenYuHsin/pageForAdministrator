@@ -1,343 +1,84 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto:300);
-
+@import url(http://fonts.googleapis.com/css?family=Lato);
+html, body {
+    padding: 0;
+    margin: 0;
+    background: url("../assets/classroom.jpg") center no-repeat;
+    background-size: cover;
+}
 html {
-  min-height: 100%;
+    font: 1em"Lato", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizelegibility;
 }
-
-body { 
-  background-color: #E6E6E6;
-  font-family: "Roboto";
+body {
+    font-size: 1.3em;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    min-width: 800px;
+    min-height: 480px;
 }
-
-a {
-  text-decoration: none;
+.biggest-container {
+    display: flex;
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -25%;
+    margin-left: -35%;
 }
-
-
-
-/*====add_button==============================================================*/
-.blocks.add {
-    background-color: #E6E6E6;
-    box-shadow      : none;
+.container {
+    width: 25%;
+    height: 40%;
+    margin: auto;
+    background-color: #0a6;
+    opacity: 0.9;
+    border-radius: 20px;
+    min-width: 100px;
+    min-height: 160px;
 }
-
-.icon_add{
-  height     : 150px;
-  width      : 150px;
-  color      : gray;
-  position   : absolute;
-  top        : 50%;
-  left       : 50%;
-  margin-left: -75px;
-  margin-top : -75px;
+.form {
+    width: 300px;
+    height: 600px;
+    margin: auto;
 }
-
-.ripple_add{
-  cursor: pointer;
+.container > span {
+    font-size: 1em;
+    font-weight: bold;
+    font-family: SimSun;
+    margin: auto;
+    position: relative;
+    left: 5%;
 }
-
-
-/*============fab==============*/
-
-.fab {
-  position        : absolute;
-  overflow        : hidden;
-  transition      : box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 0.2s;
-  box-shadow      : 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-  z-index         : 10;
-  cursor          :pointer;
+.modal {
+    display: none;
 }
-
-.fab.green {
-  background-color: #0f9d58;
-  right           : 10px;
-  top             : 50%;
-  margin-top      : -28px;
-  width           : 56px;
-  height          : 56px;
-  border-radius   : 50%;
+input {
+    position: absolute;
+    left: 39%;
 }
-
-.fab:active {
-  box-shadow      : 0 8px 17px 0 rgba(0, 0, 0, 0.2);
-  transition-delay: 0s;
+.modal-body {
+    color: white;
+    background-color: #E0000E;
 }
-
-.fab > core-icon {
-  margin: 16px;
+select {
+    position: absolute;
+    left: 39%;
+    width: 100px;
+    height: 28px;
 }
-
-.fab > core-icon::shadow path {
-  fill: #fff;
+#noaccount {
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
 }
-
-.fab {
-  position        : absolute;
-  color           : #fff;
-  overflow        : hidden;
-  transition      : box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 0.2s;
-  box-shadow      : 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-  z-index         : 10;
-  cursor          :pointer;
+.loginbtn {
+    position: relative;
+    float: left;
+    width: 20%;
+    left: 6%;
+    background-color: #9c9;
+    cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-/* =================================Icon Button==========================*/
-.icon-button {
-  position: absolute;
-  width   : 56px;
-  height  : 56px;
-}
-
-.icon-button core-icon {
-  margin: 13px;
-  transition: -webkit-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.icon-button:hover core-icon {
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-}
-
-.icon-button paper-ripple {
-  overflow: hidden;
-  color: #646464;
-}
-
-
-/*=====================little navbar==============================*/
-
-
-.three_points {
-  height:30px; 
-  width:30px;
-  right: 0px;
-  cursor  :pointer;
-}
-
-.three_points core-icon{
-  height: 16px;
-  width: 16px;
-  margin: 7px;
-}
-
-
-
-.trash_can {
-  right : 30px;
-  height:30px; 
-  width :30px;
-  cursor:pointer;
-}
-
-
-.trash_can core-icon{
-  height: 16px;
-  width: 16px;
-  margin: 7px;
-}
-
-
-/*======================modal-wrapper====================================================*/
-
-.blur{
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
-}
-
-
-.modal-wrapper{
-  width:100%;
-  height:100%;
-  position:fixed;
-  top:0; left:0;
-  background:rgba(255,257,153,0.75);
-  visibility:hidden;
-  opacity:0;
-
-  -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
-}
-
-.modal-wrapper.open{
-  opacity:1;
-  visibility:visible;
-}
-
-.modal{
-  width:600px;
-  height:400px;
-  display:block;
-  margin:50% 0 0 -300px;
-  position:relative;
-  top:50%; left:50%;
-  background:#fff;
-  opacity:0;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-.modal-wrapper.open .modal{
-  margin-top:-200px;
-  opacity:1;
-}
-
-.modal_header{
-  width:90%;
-  height:32px;
-  padding:1.5em 5%;
-  overflow:hidden;
-  background:#01bce5;
-}
-
-.btn_close{
-  width:32px;
-  height:32px;
-  display:block;
-  float:right;
-}
-
-
-/*==============================form======================================*/
-.form_newExam{
-  padding: 5%;
-}
-
-.form_step2{
-  display: none;
-}
-
-.form_step1.state2{                        /*  .XXX.XXX  => class ="XXX XXX"              */
-  display: none;                           /*  .XXX .XXX => class ="XXX"裡面的class="XXX" */         
-}
-
-.form_step2.state2{
-  display: block;
-}
-
-/* form starting stylings ------------------------------- */
-.Form_Question        { 
-  position:relative; 
-  margin-bottom:45px; 
-}
-
-input         {
-  font-size:18px;
-  padding:10px 10px 10px 5px;
-  display:block;
-  width:300px;
-  border:none;
-  border-bottom:1px solid #757575;
-}
-
-input:focus     { outline:none; }
-/*focus時會跑出outline，要隱藏掉*/
-
-/* LABEL ======================================= */
-label          {
-  color:#999; 
-  font-size:18px;
-  font-weight:normal;
-  position:absolute;
-  pointer-events:none;
-  left:5px;
-  top:10px;
-  transition:0.2s ease all; 
-  -moz-transition:0.2s ease all; 
-  -webkit-transition:0.2s ease all;
-}
-
-/* active state */
-input:focus ~ label, input:valid ~ label    {
-  top:-20px;
-  font-size:14px;
-  color:#5264AE;
-}
-
-/* BOTTOM BARS ================================= */
-.bar  { position:relative; display:block; width:300px; }
-.bar::before, .bar::after   {
-  content:'';
-  height:2px; 
-  width:0;
-  bottom:1px; 
-  position:absolute;
-  background:#5264AE; 
-  transition:0.2s ease all; 
-  -moz-transition:0.2s ease all; 
-  -webkit-transition:0.2s ease all;
-}
-.bar::before {
-  left:50%;
-}
-.bar::after {
-  right:50%; 
-}
-
-/* active state */
-input:focus ~ .bar::before, input:focus ~ .bar::after {
-  width:50%;
-}
-
-/* HIGHLIGHTER ================================== */
-.highlight {
-  position:absolute;
-  height:60%; 
-  width:100px; 
-  top:25%; 
-  left:0;
-  pointer-events:none;
-  opacity:0.5;
-}
-
-/* active state */
-input:focus ~ .highlight {
-  -webkit-animation:inputHighlighter 0.3s ease;
-  -moz-animation:inputHighlighter 0.3s ease;
-  animation:inputHighlighter 0.3s ease;
-}
-
-/* ANIMATIONS ================ */
-@-webkit-keyframes inputHighlighter {
-  from { background:#5264AE; }
-  to  { width:0; background:transparent; }
-}
-@-moz-keyframes inputHighlighter {
-  from { background:#5264AE; }
-  to  { width:0; background:transparent; }
-}
-@keyframes inputHighlighter {
-  from { background:#5264AE; }
-  to  { width:0; background:transparent; }
-}
-
-.btn_submitModal{
-  display: none;
-}
-
-.btn_submitModal.state2{
-  display: inline;
-}
-
-.btn_nextModal.state2{
-  display: none;
-}
-
-

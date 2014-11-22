@@ -1,0 +1,200 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+    <title>題目</title>
+    <link href="css/reset.css" rel="stylesheet" />
+    <script src="js/jquery.min.js"></script>
+
+    <script src="https://www.parsecdn.com/js/parse-1.2.18.min.js"></script>
+<!--     <link href="css/test.css" rel="stylesheet" /> -->
+    <link href="stylesheets/test.css" rel="stylesheet" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link rel="import" href="http://www.polymer-project.org/components/core-icons/core-icons.html">
+    <link rel="import" href="http://www.polymer-project.org/components/paper-ripple/paper-ripple.html">
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="left_button">
+          <div class="icon-button">
+            <core-icon icon="menu"></core-icon>
+            <paper-ripple class="circle recenteringTouch" fit></paper-ripple>
+          </div>
+        </div>
+    </div>
+
+    <div class="sheet">
+
+        <div class="exam_title">動力小船考試</div>
+        <button class="handin">交卷</button>
+        
+        <div id="pagination_arrows">
+            <button class="paginate left">
+                <i></i><i></i>
+            </button>
+            <span>0</span>
+            <div class="counter"></div> 
+            <button class="paginate right">
+                <i></i><i></i>
+            </button>
+        </div>
+
+
+        <div class="line"></div>
+        <div class="testnumber">第1題，你選擇的答案是</div>
+        <span class="qusanswer"></span>
+        
+
+        <div id="bigdiv">
+            <div class="question_content">
+                <p class="qussmall"></p>
+            </div>
+
+            <div class="options_list">
+                <div class="answer A">
+                    <input type="radio" name="amount" value="A" id="options_A" />
+                    <label for="options_A">A</label>
+                    <span class="spanA span"></span>
+                </div>
+                <div class="answer B">
+                    <input type="radio" name="amount" value="B" id="options_B" />
+                    <label for="options_B">B</label>
+                    <span class="spanB span"></span>
+                </div>
+
+                <div class="answer C">
+                    <input type="radio" name="amount" value="C" id="options_C" />
+                    <label for="options_C">C</label>
+                    <span class="spanC span"></span>
+                </div>
+                <div class="answer D">
+                    <input type="radio" name="amount" value="D" id="options_D" />
+                    <label for="options_D">D</label>
+                    <span class="spanD span"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- page switcher -->
+    <div id="pre" onclick="goPrePage()">
+        <a>&lt;</a>
+    </div>
+    <div id="next" onclick="goNextPage()">
+        <a>&gt;</a>
+    </div>
+
+
+
+
+    <div class="footer">
+        <div class="Q1_Q20">
+            <ul class="pagination">
+                <li><a href="#" class="active">1</a>
+                </li>
+                <li><a href="#">2</a>
+                </li>
+                <li><a href="#">3</a>
+                </li>
+                <li><a href="#">4</a>
+                </li>
+                <li><a href="#">5</a>
+                </li>
+                <li><a href="#">6</a>
+                </li>
+                <li><a href="#">7</a>
+                </li>
+                <li><a href="#">8</a>
+                </li>
+                <li><a href="#">9</a>
+                </li>
+                <li><a href="#">10</a>
+                </li>
+                <li><a href="#">11</a>
+                </li>
+                <li><a href="#">12</a>
+                </li>
+                <li><a href="#">13</a>
+                </li>
+                <li><a href="#">14</a>
+                </li>
+                <li><a href="#">15</a>
+                </li>
+                <li><a href="#">16</a>
+                </li>
+                <li><a href="#">17</a>
+                </li>
+                <li><a href="#">18</a>
+                </li>
+                <li><a href="#">19</a>
+                </li>
+                <li><a href="#">20</a>
+                </li>
+            </ul>
+        </div>
+        <div class="Q21_Q40">
+            <ul class="pagination">
+                <li><a href="#">21</a>
+                </li>
+                <li><a href="#">22</a>
+                </li>
+                <li><a href="#">23</a>
+                </li>
+                <li><a href="#">24</a>
+                </li>
+                <li><a href="#">25</a>
+                </li>
+                <li><a href="#">26</a>
+                </li>
+                <li><a href="#">27</a>
+                </li>
+                <li><a href="#">28</a>
+                </li>
+                <li><a href="#">29</a>
+                </li>
+                <li><a href="#">30</a>
+                </li>
+                <li><a href="#">31</a>
+                </li>
+                <li><a href="#">32</a>
+                </li>
+                <li><a href="#">33</a>
+                </li>
+                <li><a href="#">34</a>
+                </li>
+                <li><a href="#">35</a>
+                </li>
+                <li><a href="#">36</a>
+                </li>
+                <li><a href="#">37</a>
+                </li>
+                <li><a href="#">38</a>
+                </li>
+                <li><a href="#">39</a>
+                </li>
+                <li><a href="#">40</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+<!--     <div class="arrow">
+        <img src="assets/left.jpg" class="left">
+        <img src="assets/right.jpg" class="right">
+    </div>
+    <div class="notification">載入中，請稍後</div>
+    <div class="handlog">
+        <span class="handtext">確定交卷？</span>
+        <br/>
+        <span class="handyes">YES</span>
+        <span class="handno">NO</span>
+    </div> -->
+</body>
+    <script src="js/test.js"></script>
+</html>
