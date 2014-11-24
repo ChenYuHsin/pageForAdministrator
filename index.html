@@ -3,24 +3,53 @@
 <head>
     <meta name="generator" content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
     <title>homepage</title>
-    <link href="css/reset.css" rel="stylesheet" />
-    <!-- 記得任何東西都要先reset -->
-    <script src="js/buzz.min.js"></script>
+
     <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.client.js"></script>
     <script src="js/jquery.transit.min.js"></script>
     <script src="js/main.js"></script>
     <script src="https://www.parsecdn.com/js/parse-1.2.18.min.js"></script>
     <script src="js/signup.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
-    <link href="css/main.css" rel="stylesheet" />
+    <link href="stylesheets/index.css" rel="stylesheet" />
+    <link rel="import" href="http://www.polymer-project.org/components/core-icons/core-icons.html">
+    <link rel="import" href="http://www.polymer-project.org/components/paper-ripple/paper-ripple.html">
 
 
 </head>
 
 <body>
-    <div class="biggest-container">
+<div class="bg_picture"></div>
+<div class="grad"></div>    
+    <div class="header">
+        <div id="title">Member<span>Login</span></div>
+        <div id="noaccount">No accounts yet ?</div>
+    </div>
+    <br>
+    <div class="login">
+        <div class="form">
+            <div class="textbox">
+                <input type="text" id="username" name="username" required />
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>User Name</label>
+            </div>
+            <div class="textbox">
+                <input type="password" id="password" name="password" required />
+                <div class="icon-button">
+                    <core-icon icon="input"></core-icon>
+                </div>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Password</label>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+<!--     <div class="biggest-container">
         <div class="container" data-toggle="modal" data-target="#login">
             <br/>
             <span class="login">登入</span>
@@ -36,19 +65,18 @@
             <br/>
             <br/>
             <div class="loginbtn">
-                <!--span><a href="board.html">登入</a>
-                </span-->
+
                 <p id="loginbtn">登入</p>
             </div>
             <span data-toggle="modal" data-target="#sign-up" id="noaccount">沒有帳號嗎？</span>
         </div>
     </div>
 
-
+ -->
 
 
     <!-- Modal start-->
-    <div class="modal fade" id="sign-up" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<!--     <div class="modal fade" id="sign-up" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -100,7 +128,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Modal stop-->
 
